@@ -1,0 +1,160 @@
+*{
+  margin: 0;
+  padding:0;
+  box-sizing:border-box;  
+}
+:root{
+--color-primary: #282a36;         /* Um roxo escuro que serve como cor de fundo para o tema escuro. */
+--color-secondary: #1E1F29;       /* Um roxo ligeiramente mais claro para ser usado como fundo secundário ou destacar áreas específicas. */
+--color-text-primary: #F8F8F2;    /* Um branco suave para o texto principal, proporcionando contraste com o fundo. */
+--color-text-secondary: #bfbfbf;  /* Um cinza claro para textos secundários, como subtítulos ou descrições. */
+--color-highligh: #BD93F9;        /* Um roxo brilhante para realçar elementos importantes ou botões. */
+--color-highligh-2: #50FA7B;      /* Um verde limão para ser usado como cor de destaque para interações ou informações relevantes. */
+--color-danger: rgb(224,49,49)
+}
+
+.light{
+  --color-primary: #F8F8F2;         /* Um branco suave que serve como cor de fundo para o tema claro. */
+  --color-secondary: #EAEAEA;       /* Um cinza claro para ser usado como fundo secundário ou destacar áreas específicas no modo claro. */
+  --color-text-primary: #282A36;    /* Um roxo escuro que proporciona contraste com o fundo claro para o texto principal. */
+  --color-text-secondary: #666666;  /* Um cinza mais escuro para textos secundários, como subtítulos ou descrições.   */
+  --color-highligh: #6200EE;        /* Um roxo mais brilhante para realçar elementos importantes ou botões no modo claro. */
+  --color-highligh-2: #118B76;      /* Um verde esmeralda para ser usado como cor de destaque para interações ou informações relevantes no modo claro. */
+}
+
+body{
+  font-family: 'Fira Code';
+  background-color: var(--color-primary) ;
+  color: var(--color-text-primary);
+}
+
+h1{
+  margin: 40px 20px;
+  text-align: center;
+}
+.water-content{
+  margin-bottom: 30px;
+}
+.navigation > ul{
+  text-align: center;
+  padding: 10px;
+}
+
+.navigation > ul > li{
+  display: inline-block;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.navigation .active{
+  text-decoration: underline;
+  color: var(--color-highligh);
+}
+
+.navigation > ul > li:hover{
+  text-decoration: underline;
+  color: var(--color-highligh);
+}
+
+.container{
+  margin:auto;
+  width: fit-content;
+  max-width: 900px;
+  padding:2px 2px 20px 2px;
+  overflow:auto; 
+  border: 1px solid var(--color-text-secondary);
+  border-radius: 10px;
+}
+
+.chart-container{
+  margin:auto;
+  padding:25px 10px 10px 10px;
+  min-width: 400px;
+  width: fit-content;
+  height: 400px;
+  border-bottom: 1px solid var(--color-text-secondary);
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+}
+
+.bar{
+  margin:0 10px ;
+  width: 40px;
+  height: 80%;
+  background-color: var(--color-highligh);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.label-value{
+  position: relative;
+  font-size: 12px;
+  bottom: calc(50%);
+}
+
+.label-date{
+  position: relative;
+  font-size: 12px;
+  top: calc(50% + 15px);
+}
+
+::-webkit-scrollbar{
+  height: 10px;
+}
+
+::-webkit-scrollbar-thumb{
+  background-color: var(--color-highligh);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: var(--color-text-secondary);
+  border-radius: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+/* ADD WATER */
+svg{
+  fill: var(--color-highligh);
+}
+
+.add-water{
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+}
+.add-water ul{
+  visibility: hidden;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: var(--color-secondary);
+  margin-right: 50px;
+}
+
+.add-water ul >li{
+  padding: 5px 10px;
+  font-size: 14px;
+  list-style: none;
+  cursor: pointer;
+}
+
+.button{
+  cursor: pointer;
+  text-align: right;
+}
+
+.add-water .visible{
+  visibility: visible;
+}
+

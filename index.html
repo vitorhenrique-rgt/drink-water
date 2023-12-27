@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Drink width</title>
+</head>
+<body onload="today()">
+  <main>
+    
+    <h1>Drink Water</h1>
+    <div class="water-content">
+      <nav class="navigation">
+        <ul>
+          <li class="active" onclick="activateTab(this); today()">Today</li>
+          <li onclick="activateTab(this); lastWeek()">Week</li>
+          <li onclick="activateTab(this); lastMonth()">Month</li>
+        </ul>
+      </nav>
+      <div class="container">
+        <div class="chart-container">
+        </div>
+      </div>
+    </div>
+    <div class="add-water">
+      <ul id="water-list">
+        <li data-value="1000" onclick="selectValue(this)">1L</li>
+        <li data-value="500" onclick="selectValue(this)">500ml</li>
+        <li data-value="200" onclick="selectValue(this)">200ml</li>
+        <li data-value="100" onclick="selectValue(this)">100ml</li>
+      </ul>
+      <div class="button" onclick="displayList()">
+        <svg id="add-button" xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 256 256"><path d="M128,24A104,104,0,1,0,232,128,104.13,104.13,0,0,0,128,24Zm40,112H136v32a8,8,0,0,1-16,0V136H88a8,8,0,0,1,0-16h32V88a8,8,0,0,1,16,0v32h32a8,8,0,0,1,0,16Z"></path></svg>
+      </div>
+    </div>
+  </main>
+  <script src="index.js"></script>
+  <script src="test.js"></script>
+</body>
+</html>
